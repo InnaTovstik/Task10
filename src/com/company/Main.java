@@ -30,11 +30,9 @@ public class Main {
     }
 
     public static void printEmployee(ArrayList<Employee> e) {
-
         for (Employee employee : e) {
             System.out.println(employee);
         }
 
     }
-
 }
