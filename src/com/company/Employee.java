@@ -4,24 +4,24 @@ public class Employee implements Comparable<Employee> {
 
     private final int id;
     private static int ID;
-    String first_name;
-    String last_name;
+    String firstName;
+    String lastName;
     double salary;
 
     @Override
     public String toString() {
         return "Employee{" +
                 "id=" + id +
-                ", first_name='" + first_name + '\'' +
-                ", last_name='" + last_name + '\'' +
+                ", first_name='" + firstName + '\'' +
+                ", last_name='" + lastName + '\'' +
                 ", salary=" + salary +
                 '}';
     }
 
-    public Employee(String first_name, String last_name, double salary) {
+    public Employee(String firstName, String lastName, double salary) {
         this.id = ID++;
-        this.first_name = first_name;
-        this.last_name = last_name;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.salary = salary;
     }
 
@@ -29,20 +29,20 @@ public class Employee implements Comparable<Employee> {
         return id;
     }
 
-    String getFirst_name() {
-        return first_name;
+    String getFirstName() {
+        return firstName;
     }
 
-    void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    String getLast_name() {
-        return last_name;
+    String getLastName() {
+        return lastName;
     }
 
-    void setLast_name(String last_name) {
-        this.last_name = last_name;
+    void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     double getSalary() {
@@ -55,7 +55,7 @@ public class Employee implements Comparable<Employee> {
 
     @Override
     public int compareTo(Employee o) {
-        return 0;
+        return this.id - o.id;
     }
 
 }
